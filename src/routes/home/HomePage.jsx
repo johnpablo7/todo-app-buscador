@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ChangeAlert } from "../../ui/ChangeAlert";
 import { CreateTodoButton } from "../../ui/CreateTodoButton";
 import { EmptyTodos } from "../../ui/EmptyTodos";
@@ -15,6 +15,7 @@ import { useTodos } from "../useTodos";
 export const HomePage = () => {
   const navigate = useNavigate();
   const { state, stateUpdaters } = useTodos();
+  const [params, setParams] = useSearchParams();
 
   const {
     error,
@@ -39,7 +40,12 @@ export const HomePage = () => {
     <React.Fragment>
       <TodoHeader loading={loading}>
         <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
-        <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
+        <TodoSearch
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          params={params}
+          setParams={setParams}
+        />
       </TodoHeader>
 
       <TodoList
