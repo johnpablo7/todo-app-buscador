@@ -1,5 +1,5 @@
 {
-  "name": "curso-intro-react",
+  "name": "todo-app-buscador",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepage": "https://github.com/johnpablo7/todo-app-platzi"
+  "homepage": "https://github.com/todo-app-buscador"
 }

@@ -1,19 +1,33 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { TodoForm } from "../../ui/TodoForm";
 import { useTodos } from "../useTodos";
 
 export const EditTodoPage = () => {
+  const location = useLocation();
   const params = useParams();
   // console.log(params.id);
   const id = Number(params.id);
 
-  const { stateUpdaters } = useTodos();
+  const { state, stateUpdaters } = useTodos();
+  const { loading, getTodo } = state;
   const { editTodo } = stateUpdaters;
+
+  let todoText;
+
+  if (location.state?.todo) {
+    todoText = location.state.todo.text;
+  } else if (loading) {
+    return <p>Cargando...</p>;
+  } else {
+    const todo = getTodo(id);
+    todoText = todo.text;
+  }
 
   return (
     <TodoForm
       label='Edita tu TODO'
+      defaultTodoText={todoText}
       submitText='Editar'
       submitEvent={(newText) => editTodo(id, newText)}
     />
