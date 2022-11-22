@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/todo-app-buscador/static/css/main.4c18d398.css",
+    "main.js": "/todo-app-buscador/static/js/main.0a97b992.js",
+    "index.html": "/todo-app-buscador/index.html",
+    "static/media/delete.svg": "/todo-app-buscador/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/todo-app-buscador/static/media/edit.6ab065d3fab44b4937029afa2b2d3835.svg",
+    "static/media/check.svg": "/todo-app-buscador/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.4c18d398.css.map": "/todo-app-buscador/static/css/main.4c18d398.css.map",
+    "main.0a97b992.js.map": "/todo-app-buscador/static/js/main.0a97b992.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c18d398.css",
+    "static/js/main.0a97b992.js"
+  ]
+}
